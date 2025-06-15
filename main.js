@@ -28,11 +28,13 @@ menuBtn.addEventListener('click', () => {
 });
 
 // Formspree
+// Formspree - Versão mínima funcional
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        alert('Mensagem enviada com sucesso!');
-        this.reset();
+        setTimeout(() => {
+            this.reset();
+        }, 1000);
     });
 }
 
