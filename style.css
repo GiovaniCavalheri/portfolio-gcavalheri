@@ -28,10 +28,7 @@ body {
   padding: 0 20px;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   font-weight: 600;
 }
 
@@ -40,13 +37,14 @@ a {
   color: inherit;
 }
 
-/* Botoes */
-.btn {
+/* Botões */
+.btn-primary, .btn-secondary, .btn-code {
   display: inline-block;
   padding: 12px 24px;
   border-radius: 5px;
   font-weight: 500;
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .btn-primary {
@@ -71,7 +69,7 @@ a {
   color: var(--dark);
 }
 
-/* header */
+/* Header */
 .header-glass {
   background: var(--glass);
   backdrop-filter: blur(10px);
@@ -102,6 +100,7 @@ a {
   color: var(--light);
   font-weight: 500;
   padding: 5px 0;
+  transition: color 0.3s ease;
 }
 
 .nav-desktop a::after {
@@ -123,15 +122,6 @@ a {
 .nav-desktop a:hover,
 .nav-desktop a.active {
   color: var(--primary);
-}
-
-.menu-mobile {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--light);
-  font-size: 1.5rem;
-  cursor: pointer;
 }
 
 /* Hero Section */
@@ -196,7 +186,6 @@ a {
   transform: scale(1.03);
 }
 
-
 .cursor {
   display: inline-block;
   width: 3px;
@@ -207,13 +196,8 @@ a {
 }
 
 @keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 /* Seções */
@@ -228,19 +212,6 @@ a {
 }
 
 /* Sobre Mim */
-.about-grid {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-}
-
-.about-img img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 20px;
-  border: 5px solid var(--glass-border);
-}
-
 .about-text h3 {
   font-size: 2rem;
   margin-bottom: 20px;
@@ -303,30 +274,11 @@ a {
   overflow: hidden;
   transition: transform 0.3s ease;
   border: 1px solid var(--glass-border);
+  padding: 25px;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-}
-
-.project-img {
-  height: 200px;
-  overflow: hidden;
-}
-
-.project-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.project-card:hover .project-img img {
-  transform: scale(1.1);
-}
-
-.project-info {
-  padding: 25px;
 }
 
 .project-info h3 {
@@ -450,66 +402,4 @@ a {
 
 .social-links a:hover {
   color: var(--primary);
-}
-
-/* Responsivo */
-@media (max-width: 992px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .about-grid {
-    flex-direction: column;
-  }
-
-  .contact-grid {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-desktop {
-    display: none;
-    position: fixed;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background-color: var(--dark);
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    gap: 20px;
-  }
-
-  .nav-desktop.mobile-show {
-    display: flex;
-  }
-
-  .menu-mobile {
-    display: block;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-text h2 {
-    font-size: 2rem;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-    text-align: center;
-  }
 }

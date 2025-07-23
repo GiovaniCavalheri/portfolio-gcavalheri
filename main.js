@@ -1,3 +1,4 @@
+// Efeito de digitação no título
 function typeWriter() {
     const text = "Giovani Cavalheri";
     const typingElement = document.querySelector('.typing');
@@ -17,18 +18,7 @@ function typeWriter() {
     }, 150);
 }
 
-const menuBtn = document.querySelector('.menu-mobile');
-const navMenu = document.querySelector('.nav-desktop');
-
-menuBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('mobile-show');
-    menuBtn.innerHTML = navMenu.classList.contains('mobile-show') 
-        ? '<i class="fas fa-times"></i>' 
-        : '<i class="fas fa-bars"></i>';
-});
-
-// Formspree
-// Formspree - Versão mínima funcional
+// Formspree - Reset do formulário
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
@@ -38,7 +28,7 @@ if (contactForm) {
     });
 }
 
-// Rolagem Suave
+// Rolagem Suave para links da navegação
 document.querySelectorAll('.nav-desktop a').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -50,14 +40,10 @@ document.querySelectorAll('.nav-desktop a').forEach(link => {
             top: targetSection.offsetTop - 80,
             behavior: 'smooth'
         });
-        
-        if (navMenu.classList.contains('mobile-show')) {
-            navMenu.classList.remove('mobile-show');
-            menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-        }
     });
 });
 
+// Ativação do menu conforme scroll
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
     
@@ -77,7 +63,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// carrega efeitos quando a pag carrega
+// Inicialização quando a página carrega
 document.addEventListener('DOMContentLoaded', () => {
     typeWriter();
 });
