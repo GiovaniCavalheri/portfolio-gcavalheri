@@ -252,6 +252,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-bottom: 4rem;
 }
 
 .skills-list span {
@@ -323,9 +324,15 @@ a {
 }
 
 /* Contato */
+
+.section-title {
+  margin-top: 3rem;
+}
+
 .contact-grid {
   display: flex;
   gap: 50px;
+  margin-bottom: 2rem;
 }
 
 .contact-form {
