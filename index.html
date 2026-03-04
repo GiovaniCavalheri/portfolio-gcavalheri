@@ -4,27 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio Giovani Cavalheri</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
+
     <!-- Cabeçalho -->
     <header class="header-glass">
-      <div class="container">
-        <h1 class="logo">Dev<span>Cavalheri</span></h1>
-        <nav class="nav-desktop">
+      <div class="container d-flex justify-content-between align-items-center">
+        <h1 class="logo mb-0">Dev<span>Cavalheri</span></h1>
+        <nav class="nav-desktop d-flex gap-4">
           <a href="#home" class="active">Home</a>
           <a href="#sobre">Sobre</a>
           <a href="#projetos">Projetos</a>
@@ -33,217 +24,197 @@
       </div>
     </header>
 
+    <!-- Hero -->
     <section id="home" class="hero">
       <div class="container">
         <div class="row align-items-center g-4">
           <div class="col-md-7">
-            <h2>
-              Olá, eu sou <span class="typing">Giovani Cavalheri</span
-              ><span class="cursor"></span>
+            <h2 class="mb-3">
+              Olá, eu sou <span class="typing">Giovani Cavalheri</span><span class="cursor"></span>
             </h2>
-            <p class="subtitle">
+            <p class="subtitle mb-4">
               Desenvolvedor Full Stack | JavaScript | Typescript | React | Python
             </p>
-            <div class="hero-buttons">
+            <div class="d-flex gap-3">
               <a href="doc/CurriculoGi.pdf" download class="btn-primary">Download CV</a>
               <a href="#contato" class="btn-secondary">Contato</a>
             </div>
           </div>
           <div class="col-md-5 d-flex justify-content-center">
-            <img
-              src="img-myperson/Me.jpeg"
-              alt="Giovani Cavalheri"
-              class="profile-img img-fluid"
-            />
+            <img src="img-myperson/Me.jpeg" alt="Giovani Cavalheri" class="profile-img img-fluid" />
           </div>
         </div>
       </div>
     </section>
 
     <!-- Sobre Mim -->
-    <section id="sobre" class="about-section">
+    <section id="sobre" class="about-section py-5">
       <div class="container">
         <h2 class="section-title">Sobre <span>Mim</span></h2>
-          <div class="about-text">
-            <h3>Desenvolvedor Full Stack</h3>
-            <p>
-              Desenvolvedor FullStack, aplicando no cotidiano conhecimentos em C#, Typescript, JavaScript, React, SQL e metodologias ágeis para contribuir com o desenvolvimento de soluções inovadoras.
+        <div class="about-text">
+          <h3 class="mb-3">Desenvolvedor Full Stack</h3>
+          <p class="text-secondary mb-4">
+            Desenvolvedor FullStack, aplicando no cotidiano conhecimentos em C#, Typescript, JavaScript, React, SQL e metodologias ágeis para contribuir com o desenvolvimento de soluções inovadoras.
+          </p>
+
+          <div class="about-info mb-4">
+            <p class="d-flex align-items-center gap-2 mb-2">
+              <i class="fas fa-envelope text-danger"></i>
+              <a href="mailto:developer.cavalheri@gmail.com" class="link-primary-custom">developer.cavalheri@gmail.com</a>
             </p>
+            <p class="d-flex align-items-center gap-2 mb-2">
+              <i class="fab fa-github text-danger"></i>
+              <a href="https://github.com/GiovaniCavalheri" target="_blank" class="link-primary-custom">github.com/GiovaniCavalheri</a>
+            </p>
+            <p class="d-flex align-items-center gap-2 mb-2">
+              <i class="fab fa-linkedin text-danger"></i>
+              <a href="https://www.linkedin.com/in/giovani-cavalheri-798096316/" target="_blank" class="link-primary-custom">linkedin.com/in/giovani-cavalheri</a>
+            </p>
+          </div>
 
-            <div class="about-info">
-              <p>
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:developer.cavalheri@gmail.com">developer.cavalheri@gmail.com</a>
-              </p>
-              <p>
-                <i class="fab fa-github"></i>
-                <a href="https://github.com/GiovaniCavalheri" target="_blank">github.com/GiovaniCavalheri</a>
-              </p>
-              <p>
-                <i class="fab fa-linkedin"></i>
-                <a href="https://www.linkedin.com/in/giovani-cavalheri-798096316/" target="_blank">linkedin.com/in/giovani-cavalheri</a>
-              </p>
-            </div>
-
-            <div class="skills">
-              <h4>Habilidades:</h4>
-              <div class="skills-list">
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>JavaScript</span>
-                <span>Typescript</span>
-                <span>SQL</span>
-                <span>MongoDB</span>
-                <span>Git</span>
-                <span>Webpack</span>
-                <span>React</span>
-              </div>
+          <div class="skills mb-5">
+            <h4 class="mb-3">Habilidades:</h4>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="skill-badge">HTML5</span>
+              <span class="skill-badge">CSS3</span>
+              <span class="skill-badge">JavaScript</span>
+              <span class="skill-badge">Typescript</span>
+              <span class="skill-badge">SQL</span>
+              <span class="skill-badge">MongoDB</span>
+              <span class="skill-badge">Git</span>
+              <span class="skill-badge">Webpack</span>
+              <span class="skill-badge">React</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projetos" class="projects-section">
+    <!-- Projetos -->
+    <section id="projetos" class="projects-section py-5">
       <div class="container">
         <h2 class="section-title">Meus <span>Projetos</span></h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-info">
-              <h3>Validação de Formulário</h3>
-              <p>Projeto com validação em tempo real usando JavaScript.</p>
-              <div class="project-techs">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-3">
+            <div class="project-card h-100 p-4 rounded-3 d-flex flex-column">
+              <h3 class="project-title mb-2">Validação de Formulário</h3>
+              <p class="text-secondary flex-grow-1">Projeto com validação em tempo real usando JavaScript.</p>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="tech-badge">HTML</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">JavaScript</span>
               </div>
-              <a href="https://github.com/GiovaniCavalheri/Ex-Validando-Form" target="_blank" class="btn-code">
+              <a href="https://github.com/GiovaniCavalheri/Ex-Validando-Form" target="_blank" class="btn-code d-inline-flex align-items-center gap-2">
                 <i class="fab fa-github"></i> Ver Código
               </a>
             </div>
           </div>
 
-          <div class="project-card">
-            <div class="project-info">
-              <h3>Cadastro de Usuários</h3>
-              <p>Aplicação fullstack desenvolvida com Integração API REST.</p>
-              <div class="project-techs">
-                <span>React</span><span>CSS</span><span>JavaScript</span>
-                <span>Node.JS</span><span>Express</span><span>Prisma</span><span>MongoDB</span>
+          <div class="col-md-6 col-lg-3">
+            <div class="project-card h-100 p-4 rounded-3 d-flex flex-column">
+              <h3 class="project-title mb-2">Cadastro de Usuários</h3>
+              <p class="text-secondary flex-grow-1">Aplicação fullstack desenvolvida com Integração API REST.</p>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Node.JS</span>
+                <span class="tech-badge">Express</span>
+                <span class="tech-badge">Prisma</span>
+                <span class="tech-badge">MongoDB</span>
               </div>
-              <a href="https://github.com/GiovaniCavalheri/Cadastro-de-Usuarios" target="_blank" class="btn-code">
+              <a href="https://github.com/GiovaniCavalheri/Cadastro-de-Usuarios" target="_blank" class="btn-code d-inline-flex align-items-center gap-2">
                 <i class="fab fa-github"></i> Ver Código
               </a>
             </div>
           </div>
 
-          <div class="project-card">
-            <div class="project-info">
-              <h3>API - Registro de Usuários</h3>
-              <p>API REST desenvolvida com Node.js, Express e Prisma para integração com MongoDB.</p>
-              <div class="project-techs">
-                <span>JavaScript</span><span>Node.JS</span><span>Express</span>
-                <span>Prisma</span><span>MongoDB</span>
+          <div class="col-md-6 col-lg-3">
+            <div class="project-card h-100 p-4 rounded-3 d-flex flex-column">
+              <h3 class="project-title mb-2">API - Registro de Usuários</h3>
+              <p class="text-secondary flex-grow-1">API REST com Node.js, Express e Prisma para integração com MongoDB.</p>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="tech-badge">Node.JS</span>
+                <span class="tech-badge">Express</span>
+                <span class="tech-badge">Prisma</span>
+                <span class="tech-badge">MongoDB</span>
               </div>
-              <a href="https://github.com/GiovaniCavalheri/Cadastro-Usuarios-API" target="_blank" class="btn-code">
+              <a href="https://github.com/GiovaniCavalheri/Cadastro-Usuarios-API" target="_blank" class="btn-code d-inline-flex align-items-center gap-2">
                 <i class="fab fa-github"></i> Ver Código
               </a>
             </div>
           </div>
 
-          <div class="project-card">
-            <div class="project-info">
-              <h3>NLW - Assistente de Meta</h3>
-              <p>Um assistente inteligente que responde dúvidas sobre jogos, builds, patches recentes e programação, usando a API do Google Gemini.</p>
-              <div class="project-techs">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                <span>Node.js</span><span>SQLite</span>
+          <div class="col-md-6 col-lg-3">
+            <div class="project-card h-100 p-4 rounded-3 d-flex flex-column">
+              <h3 class="project-title mb-2">NLW - Assistente de Meta</h3>
+              <p class="text-secondary flex-grow-1">Assistente inteligente usando a API do Google Gemini para jogos e programação.</p>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="tech-badge">HTML</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">SQLite</span>
               </div>
-              <a href="https://github.com/GiovaniCavalheri/Nlw-Project" target="_blank" class="btn-code">
+              <a href="https://github.com/GiovaniCavalheri/Nlw-Project" target="_blank" class="btn-code d-inline-flex align-items-center gap-2">
                 <i class="fab fa-github"></i> Ver Código
               </a>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <section id="contato" class="contact-section">
+    <!-- Contato -->
+    <section id="contato" class="contact-section py-5">
       <div class="container">
         <h2 class="section-title">Entre em <span>Contato</span></h2>
 
         <div class="row g-5 mb-4">
-
           <div class="col-md-7">
-            <form
-              action="https://formspree.io/f/mdkzonak"
-              method="POST"
-            >
+            <form action="https://formspree.io/f/mdkzonak" method="POST">
               <div class="mb-3">
-                <input
-                  type="text"
-                  name="name"
-                  class="form-control custom-input"
-                  placeholder="Seu Nome"
-                  required
-                />
+                <input type="text" name="name" class="form-control custom-input" placeholder="Seu Nome" required />
               </div>
-
               <div class="mb-3">
-                <input
-                  type="email"
-                  name="email"
-                  class="form-control custom-input"
-                  placeholder="Seu E-mail"
-                  required
-                />
+                <input type="email" name="email" class="form-control custom-input" placeholder="Seu E-mail" required />
               </div>
-
               <div class="mb-3">
-                <textarea
-                  name="message"
-                  class="form-control custom-input"
-                  placeholder="Sua Mensagem"
-                  rows="5"
-                  required
-                ></textarea>
+                <textarea name="message" class="form-control custom-input" placeholder="Sua Mensagem" rows="5" required></textarea>
               </div>
-
               <button type="submit" class="btn-primary w-100">
-                <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                <i class="fas fa-paper-plane me-2"></i> Enviar Mensagem
               </button>
             </form>
           </div>
 
-          <!-- Coluna das informações de contato -->
-          <div class="col-md-5 d-flex flex-column justify-content-center">
-            <div class="info-item">
-              <i class="fas fa-envelope"></i>
-              <p>developer.cavalheri@gmail.com</p>
+          <div class="col-md-5 d-flex flex-column justify-content-center gap-4">
+            <div class="d-flex align-items-center gap-3">
+              <i class="fas fa-envelope fs-4 text-danger"></i>
+              <p class="mb-0">developer.cavalheri@gmail.com</p>
             </div>
-            <div class="info-item">
-              <i class="fab fa-github"></i>
-              <a href="https://github.com/GiovaniCavalheri" target="_blank">GiovaniCavalheri</a>
+            <div class="d-flex align-items-center gap-3">
+              <i class="fab fa-github fs-4 text-danger"></i>
+              <a href="https://github.com/GiovaniCavalheri" target="_blank" class="link-light link-primary-custom">GiovaniCavalheri</a>
             </div>
-            <div class="info-item">
-              <i class="fab fa-linkedin"></i>
-              <a href="https://www.linkedin.com/in/giovani-cavalheri-798096316/" target="_blank">Giovani Cavalheri</a>
+            <div class="d-flex align-items-center gap-3">
+              <i class="fab fa-linkedin fs-4 text-danger"></i>
+              <a href="https://www.linkedin.com/in/giovani-cavalheri-798096316/" target="_blank" class="link-light link-primary-custom">Giovani Cavalheri</a>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2025 Giovani Cavalheri. Todos os direitos reservados.</p>
-        <div class="social-links">
-          <a href="https://github.com/GiovaniCavalheri" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/giovani-cavalheri-798096316/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:developer.cavalheri@gmail.com"><i class="fas fa-envelope"></i></a>
+    <!-- Footer -->
+    <footer class="footer py-4">
+      <div class="container text-center">
+        <p class="mb-3">&copy; 2025 Giovani Cavalheri. Todos os direitos reservados.</p>
+        <div class="d-flex justify-content-center gap-4">
+          <a href="https://github.com/GiovaniCavalheri" target="_blank" class="fs-5 link-light link-primary-custom"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/giovani-cavalheri-798096316/" target="_blank" class="fs-5 link-light link-primary-custom"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:developer.cavalheri@gmail.com" class="fs-5 link-light link-primary-custom"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
     </footer>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
