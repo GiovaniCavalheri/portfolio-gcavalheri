@@ -81,6 +81,12 @@ a {
   padding: 15px 0;
 }
 
+.header-glass .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .logo {
   font-size: 1.8rem;
   color: var(--primary);
@@ -137,22 +143,12 @@ a {
   );
 }
 
-.hero-content {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-}
-
-.hero-text {
-  flex: 1;
-}
-
-.hero-text h2 {
+.hero h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-.hero-text h2 .typing {
+.hero h2 .typing {
   color: var(--primary);
 }
 
@@ -165,12 +161,6 @@ a {
 .hero-buttons {
   display: flex;
   gap: 20px;
-}
-
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
 }
 
 .profile-img {
@@ -205,6 +195,7 @@ a {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 50px;
+  margin-top: 3rem;
 }
 
 .section-title span {
@@ -323,48 +314,34 @@ a {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Contato */
-
-.section-title {
-  margin-top: 3rem;
-}
-
-.contact-grid {
-  display: flex;
-  gap: 50px;
-  margin-bottom: 2rem;
-}
-
-.contact-form {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 15px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--glass-border);
-  border-radius: 8px;
-  color: var(--light);
+/* =============================================
+   CONTATO — inputs customizados sobre Bootstrap
+   O Bootstrap define o form-control com fundo
+   branco. Aqui a gente sobrescreve para manter
+   o visual escuro/glassmorphism do portfólio.
+   ============================================= */
+.custom-input {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 8px !important;
+  color: var(--light) !important;
   font-size: 1rem;
+  font-family: "Poppins", sans-serif;
 }
 
-.form-group textarea {
-  resize: vertical;
-  min-height: 150px;
+.custom-input::placeholder {
+  color: var(--gray);
 }
 
-.contact-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* Quando o input está em foco, muda a cor da borda para o vermelho do tema */
+.custom-input:focus {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 93, 86, 0.25) !important;
+  color: var(--light) !important;
 }
 
+/* Contato - info lateral */
 .info-item {
   display: flex;
   align-items: center;
